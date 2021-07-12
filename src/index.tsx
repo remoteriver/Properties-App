@@ -18,8 +18,6 @@ import 'sanitize.css/sanitize.css';
 
 import { App } from 'app';
 
-import { HelmetProvider } from 'react-helmet-async';
-
 import { configureAppStore } from 'store/configureStore';
 
 import { ThemeProvider } from 'styles/theme/ThemeProvider';
@@ -28,6 +26,7 @@ import reportWebVitals from 'reportWebVitals';
 
 // Initialize languages
 import './locales/i18n';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Observe loading of Inter (to remove 'Inter', remove the <link> tag in
 // the index.html file and this observer)
