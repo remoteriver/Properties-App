@@ -32,6 +32,7 @@ export function App() {
  * 
       <Header></Header>
  */}
+      <Header></Header>
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
         <Route component={NotFoundPage} />
