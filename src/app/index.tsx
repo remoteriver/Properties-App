@@ -15,6 +15,7 @@ import { GlobalStyle } from '../styles/global-styles';
 import { useTranslation } from 'react-i18next';
 import { HomePage } from './containers/HomePage';
 import { NotFoundPage } from './containers/NotFoundPage';
+import { Header } from './containers/Header/Loadable';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -28,6 +29,7 @@ export function App() {
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
 
+      <Header></Header>
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
         <Route component={NotFoundPage} />
