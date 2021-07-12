@@ -1,3 +1,4 @@
+import { HomePageState } from 'app/containers/HomePage/types';
 import { ThemeState } from 'styles/theme/slice/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
@@ -9,5 +10,6 @@ import { ThemeState } from 'styles/theme/slice/types';
 */
 export interface RootState {
   theme?: ThemeState;
+  homepageState: HomePageState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }
