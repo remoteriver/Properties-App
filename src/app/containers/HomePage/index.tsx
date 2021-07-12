@@ -47,8 +47,8 @@ export const HomePage = () => {
                   Results
                 </Typography>
                 <Grid container direction="column" spacing={2}>
-                  {results.map(prop => (
-                    <Grid item>
+                  {results.map((prop, index) => (
+                    <Grid item key={index}>
                       <PropertyCard property={prop}>
                         <Button
                           color="primary"
@@ -71,8 +71,8 @@ export const HomePage = () => {
                   Saved
                 </Typography>
                 <Grid container direction="column" spacing={2}>
-                  {saved.map(prop => (
-                    <Grid item>
+                  {saved.map((prop, index) => (
+                    <Grid item key={index}>
                       <PropertyCard property={prop}>
                         <Button
                           color="secondary"

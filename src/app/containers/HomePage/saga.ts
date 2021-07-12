@@ -1,5 +1,4 @@
-import { PayloadAction } from '@reduxjs/toolkit';
-import { call, delay, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { request } from 'utils/request';
 import { actions } from './slice';
 import { Data } from './types';
