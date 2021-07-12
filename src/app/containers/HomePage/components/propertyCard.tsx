@@ -1,4 +1,4 @@
-import React, { Component, ComponentType } from 'react';
+import React, { Component, ComponentType, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -16,12 +16,17 @@ export interface Props {
 }
 
 const useStyles = makeStyles({
-  root: {},
+  root: { position: 'relative' },
   media: {
     height: 240,
   },
   banner: {
     backgroundColor: (props: BrandingColor) => props.primary,
+  },
+  children: {
+    position: 'absolute',
+    right: 15,
+    bottom: 22,
   },
 });
 
@@ -29,30 +34,47 @@ export const PropertyCard = (props: Props) => {
   const { property, children } = props;
   const classes = useStyles(property.agency.brandingColors);
 
+  const [hover, setHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHover(true);
+  };
+  const handleMouseLeave = () => {
+    setHover(false);
+  };
+
   return (
-    <Card className={classes.root}>
-      <CardContent className={classes.banner}>
-        <Grid container justifyContent="space-between" alignItems="center">
-          <Grid item>
-            <img src={property.agency.logo} alt="agency logo" />
+    <div className={classes.root}>
+      <Card
+        className={classes.root}
+        onMouseEnter={() => handleMouseEnter()}
+        onMouseLeave={() => handleMouseLeave()}
+      >
+        <CardContent className={classes.banner}>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item>
+              <img src={property.agency.logo} alt="agency logo" />
+            </Grid>
           </Grid>
-        </Grid>
-      </CardContent>
-      <CardMedia
-        className={classes.media}
-        image={property.mainImage}
-        title="main image"
-      />
-      <CardContent>
-        <Grid container justifyContent="space-between" alignItems="center">
-          <Grid item>
-            <Typography gutterBottom variant="h5" component="span">
-              {property.price}
-            </Typography>
+        </CardContent>
+        <CardMedia
+          className={classes.media}
+          image={property.mainImage}
+          title="main image"
+        />
+        <CardContent>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item>
+              <Typography gutterBottom variant="h5" component="span">
+                {property.price}
+              </Typography>
+            </Grid>
+            <Grid item hidden={!hover}>
+              <div className={classes.children}>{children}</div>
+            </Grid>
           </Grid>
-          <Grid item>{children}</Grid>
-        </Grid>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </div>
   );
 };

@@ -9,6 +9,7 @@ import {
 import { PropertyCard } from 'app/containers/HomePage/components/propertyCard';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Property } from 'types/Property';
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { useEffectOnMount } from 'utils/useEffectOnMount';
 import { saga } from './saga';
@@ -24,13 +25,16 @@ export const HomePage = () => {
   const saved = useSelector(selectSaved);
 
   useEffectOnMount(() => {
-    //debugger;
     dispatch(actions.getData());
   });
 
-  const handleAddProperty = () => {};
+  const handleAddProperty = (prop: Property) => {
+    dispatch(actions.addProperty(prop));
+  };
 
-  const handleRemoveProperty = () => {};
+  const handleRemoveProperty = (prop: Property) => {
+    dispatch(actions.removeProperty(prop));
+  };
 
   return (
     <>
@@ -43,12 +47,12 @@ export const HomePage = () => {
                   Results
                 </Typography>
                 <Grid container direction="column" spacing={2}>
-                  {results.map(res => (
+                  {results.map(prop => (
                     <Grid item>
-                      <PropertyCard property={res}>
+                      <PropertyCard property={prop}>
                         <Button
                           color="primary"
-                          onClick={() => handleAddProperty()}
+                          onClick={() => handleAddProperty(prop)}
                         >
                           Add Property
                         </Button>
@@ -67,12 +71,12 @@ export const HomePage = () => {
                   Saved
                 </Typography>
                 <Grid container direction="column" spacing={2}>
-                  {saved.map(res => (
+                  {saved.map(prop => (
                     <Grid item>
-                      <PropertyCard property={res}>
+                      <PropertyCard property={prop}>
                         <Button
                           color="secondary"
-                          onClick={() => handleRemoveProperty()}
+                          onClick={() => handleRemoveProperty(prop)}
                         >
                           Remove Property
                         </Button>
