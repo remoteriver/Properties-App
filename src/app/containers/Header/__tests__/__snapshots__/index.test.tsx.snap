@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render and match the snapshot 1`] = `
+<WithStyles(ForwardRef(AppBar))
+  position="static"
+>
+  <WithStyles(ForwardRef(Toolbar))>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-title-2"
+      variant="h6"
+    >
+      Properties
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Toolbar))>
+</WithStyles(ForwardRef(AppBar))>
+`;
+
+exports[`<HomePage /> should render and match the snapshot 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "store": Object {
+        "createReducer": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "injectedReducers": Object {},
+        "injectedSagas": Object {},
+        "replaceReducer": [Function],
+        "runSaga": [Function],
+        "subscribe": [Function],
+        Symbol(Symbol.observable): [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "createReducer": [Function],
+          "dispatch": [Function],
+          "getState": [Function],
+          "injectedReducers": Object {},
+          "injectedSagas": Object {},
+          "replaceReducer": [Function],
+          "runSaga": [Function],
+          "subscribe": [Function],
+          Symbol(Symbol.observable): [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <UNDEFINED />
+</Context.Provider>
+`;

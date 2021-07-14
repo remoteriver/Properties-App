@@ -28,10 +28,6 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
-      {/**
- * 
-      <Header></Header>
- */}
       <Header></Header>
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />

@@ -3,7 +3,7 @@
 exports[`<App /> should render and match the snapshot 1`] = `
 <BrowserRouter>
   <Helmet
-    defaultTitle="React Boilerplate"
+    defaultTitle="Properties App"
     defer={true}
     encodeSpecialCharacters={true}
     htmlAttributes={
@@ -11,13 +11,14 @@ exports[`<App /> should render and match the snapshot 1`] = `
         "lang": "en-US",
       }
     }
-    titleTemplate="%s - React Boilerplate"
+    titleTemplate="%s - Properties App"
   >
     <meta
       content="A React Boilerplate application"
       name="description"
     />
   </Helmet>
+  <Unknown />
   <Switch>
     <Route
       component={[Function]}

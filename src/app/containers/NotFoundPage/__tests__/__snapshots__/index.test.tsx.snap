@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFoundPage /> should render and match the snapshot 1`] = `
+<React.Fragment>
+  <WithStyles(ForwardRef(Container))>
+    <Styled(MuiBox)
+      m={30}
+    />
+    <Styled(MuiBox)
+      textAlign="center"
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="h2"
+      >
+        404 Not Found
+      </WithStyles(ForwardRef(Typography))>
+    </Styled(MuiBox)>
+  </WithStyles(ForwardRef(Container))>
+</React.Fragment>
+`;
