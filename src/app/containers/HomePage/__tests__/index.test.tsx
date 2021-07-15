@@ -49,7 +49,7 @@ describe('<HomePage />', () => {
     //assert
     expect(mockDispatchFn).toBeCalledWith(actions.getData());
 
-    //tear down
+    //teardown
     useDispatchSpy.mockClear();
   });
 });

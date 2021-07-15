@@ -17,6 +17,7 @@ describe('homepageSlice', () => {
   };
 
   it('should add a new property', () => {
+    //arrange
     let previousState: HomePageState = {
       results: [mockProperty],
       saved: [],
@@ -34,6 +35,7 @@ describe('homepageSlice', () => {
   });
 
   it('should remove a new property', () => {
+    //arrange
     let previousState: HomePageState = {
       results: [],
       saved: [mockProperty],
