@@ -26,6 +26,14 @@ const authSlice = createSlice({
       state.results.push(action.payload);
       remove(state.saved, p => p.id === action.payload.id);
     },
+    disableProperty(state, action: PayloadAction<Property>) {
+      remove(state.results, p => p.id === action.payload.id);
+      state.results = state.results.concat([action.payload]);
+    },
+    enableProperty(state, action: PayloadAction<Property>) {
+      remove(state.results, p => p.id === action.payload.id);
+      state.results = state.results.concat([action.payload]);
+    },
   },
 });
 

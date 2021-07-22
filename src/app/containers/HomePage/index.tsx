@@ -36,6 +36,14 @@ export const HomePage = () => {
     dispatch(actions.removeProperty(prop));
   };
 
+  const handleClickDisable = (prop: Property) => {
+    dispatch(actions.disableProperty({ ...prop, disabled: true }));
+  };
+
+  const handleClickEnable = (prop: Property) => {
+    dispatch(actions.enableProperty({ ...prop, disabled: false }));
+  };
+
   return (
     <>
       <Container>
@@ -50,12 +58,33 @@ export const HomePage = () => {
                   {results?.map((prop, index) => (
                     <Grid item key={index}>
                       <PropertyCard property={prop}>
-                        <Button
-                          color="primary"
-                          onClick={() => handleAddProperty(prop)}
-                        >
-                          Add Property
-                        </Button>
+                        <Grid container direction="row">
+                          <Grid item>
+                            <Button
+                              color="primary"
+                              onClick={() => handleAddProperty(prop)}
+                            >
+                              Add Property
+                            </Button>
+                          </Grid>
+                          <Grid item>
+                            {prop?.disabled === true ? (
+                              <Button
+                                color="primary"
+                                onClick={() => handleClickEnable(prop)}
+                              >
+                                Enable
+                              </Button>
+                            ) : (
+                              <Button
+                                color="primary"
+                                onClick={() => handleClickDisable(prop)}
+                              >
+                                Disable
+                              </Button>
+                            )}
+                          </Grid>
+                        </Grid>
                       </PropertyCard>
                     </Grid>
                   ))}

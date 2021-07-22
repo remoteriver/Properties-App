@@ -3,6 +3,7 @@ export interface Property {
   price: string;
   agency: Agency;
   mainImage: string;
+  disabled?: boolean;
 }
 
 export interface Agency {

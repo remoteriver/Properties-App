@@ -14,6 +14,13 @@ export interface Props {
 
 const useStyles = makeStyles({
   root: { position: 'relative' },
+  card: {
+    position: 'relative',
+  },
+  cardDisabled: {
+    position: 'relative',
+    opacity: 0.5,
+  },
   media: {
     height: 240,
   },
@@ -43,7 +50,9 @@ export const PropertyCard = (props: Props) => {
   return (
     <div className={classes.root}>
       <Card
-        className={classes.root}
+        className={
+          property?.disabled === true ? classes.cardDisabled : classes.card
+        }
         onMouseEnter={() => handleMouseEnter()}
         onMouseLeave={() => handleMouseLeave()}
       >
