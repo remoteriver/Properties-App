@@ -9,7 +9,7 @@ export const initialState: ContainerState = {
   saved: [],
 };
 
-const authSlice = createSlice({
+const homepageSlice = createSlice({
   name: 'homepageState',
   initialState,
   reducers: {
@@ -37,4 +37,4 @@ const authSlice = createSlice({
   },
 });
 
-export const { actions, reducer, name: sliceKey } = authSlice;
+export const { actions, reducer, name: sliceKey } = homepageSlice;

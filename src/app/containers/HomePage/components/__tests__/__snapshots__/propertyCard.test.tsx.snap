@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> should render and match the snapshot 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(Card))
+    className="makeStyles-root-1"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <WithStyles(ForwardRef(CardContent))
+      className="makeStyles-banner-3 makeStyles-banner-5"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        container={true}
+        justifyContent="space-between"
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+        >
+          <img
+            alt="agency logo"
+            src="https://i1.au.reastatic.net/170x32/d9e65c666e427e655fb63dcfe73f50d4ac7ff9a58c173db9474bd92e75b01070/main.gif"
+          />
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(CardMedia))
+      className="makeStyles-media-2"
+      image="https://i2.au.reastatic.net/640x480/20bfc8668a30e8cabf045a1cd54814a9042fc715a8be683ba196898333d68cec/main.jpg"
+      title="main image"
+    />
+    <WithStyles(ForwardRef(CardContent))>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        container={true}
+        justifyContent="space-between"
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            gutterBottom={true}
+            variant="h5"
+          >
+            $726,500
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          hidden={true}
+          item={true}
+        >
+          <div
+            className="makeStyles-children-4"
+          >
+            <WithStyles(ForwardRef(Button))>
+              Add Property
+            </WithStyles(ForwardRef(Button))>
+          </div>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(CardContent))>
+  </WithStyles(ForwardRef(Card))>
+</div>
+`;
